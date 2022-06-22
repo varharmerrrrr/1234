@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище aptekaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Doktor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Lekarstvo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Forma" Type="varchar" MaxLength="50" />
+    <Property Name="Doza" Type="varchar" MaxLength="50" />
+    <Property Name="Proiz" Type="varchar" MaxLength="50" />
+    <Property Name="Srok" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Хранилище aptekaModelContainer">
+    <EntitySet Name="Doktor" EntityType="Self.Doktor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lekarstvo" EntityType="Self.Lekarstvo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
